@@ -2,13 +2,13 @@ const express = require('express');
 const router = express.Router();
 const profesoresController = require('../controllers/profesoresController');
 
-router.get('/', profesoresControllerController.consultar);
+router.get('/', profesoresController.consultar);
 
-router.post('/', profesoresControllerController.ingresar);
+router.post('/', profesoresController.ingresar);
 
 router.route('/:id')
-    .get(profesoresControllerController.consultarDetalle)
-    .put(profesoresControllerController.actualizar)
-    .delete(profesoresControllerController.borrar);
+    .get(profesoresController.consultarDetalle)
+    .put(profesoresController.actualizar)
+    .delete(profesoresController.borrar);
 
 module.exports = router;

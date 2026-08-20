@@ -5,7 +5,8 @@ class EstudiantesController {
         res.json({ msg: 'Consulta estudiantes desde clase' });
     }
     consultarDetalle(req, res) {
-        res.json({ msg: 'Consulta detalle estudiante desde clase' })
+        const { id } = req.params;
+        res.json({ msg: `Consulta detalle estudiante desde clase con id ${id}` })
     }
 
     ingresar(req, res) {
